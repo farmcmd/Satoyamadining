@@ -106,7 +106,7 @@
                         </div>
                     </div>
             
-                    <!-- 子區塊 2: 永續旅遊活動預約 (已更新視覺) -->
+                    <!-- 子區塊 2: 永續旅遊活動預約 -->
                     <div class="bg-amber-100 p-6 rounded-lg shadow-md flex flex-col">
                         <h3 class="text-xl font-semibold text-amber-800 mb-4 text-center">永續旅遊活動預約</h3>
                         <div class="space-y-3 flex-grow flex flex-col justify-center">
@@ -118,7 +118,7 @@
                         </div>
                     </div>
             
-                    <!-- 子區塊 3: 企業綠色採購 (已更新視覺) -->
+                    <!-- 子區塊 3: 企業綠色採購 -->
                     <div class="bg-blue-100 p-6 rounded-lg shadow-md flex flex-col">
                         <div class="text-center">
                             <h3 class="text-xl font-semibold text-blue-800 mb-2">企業綠色採購</h3>
@@ -156,19 +156,144 @@
 
     <!-- 「關於我們」彈出視窗 (Modal) -->
     <div id="aboutModal" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 transition-opacity duration-300">
-        <div class="bg-white rounded-lg shadow-xl max-w-3xl w-full p-6 md:p-8 relative transform scale-95 transition-transform duration-300">
-            <button id="closeAboutModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full p-6 md:p-8 relative transform scale-95 transition-transform duration-300">
+            <button id="closeAboutModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            <h1 class="text-3xl font-bold text-green-800 border-b-2 border-green-200 pb-3 mb-6">關於我們</h1>
-            <div class="text-gray-700 leading-relaxed space-y-4 max-h-[70vh] overflow-y-auto pr-4">
-                <p>「里山餐桌」是由南投水里鄉一群有志青年農民與在地夥伴共同發起的倡議，旨在以水里為核心，從土地與食物的源頭出發，構築一個連結人與自然、消費與生產的永續對話平台。這項行動不僅是一場深度的文化體驗，更是對在地農業與生態保育的承諾。</p>
-                <p>我們深耕於在地「生產」端，透過多元的食農教育課程、農場導覽與沉浸式產地體驗，讓參與者親身感受食物從泥土到餐桌的奇妙旅程。此舉旨在提升大眾對農業背後價值與農民辛勤勞動的認知，促進對在地農產品的認同與支持。</p>
-                <p>在「生活」面向，我們將永續理念融入日常，精心策劃大地餐桌饗宴、手作DIY體驗及一系列教育推廣活動。這不僅讓產品獲得消費者的青睞，更重要的是被深度理解與珍惜。透過每一次有溫度的交流，水里獨特的在地故事與永續生活態度得以被更多人看見，促使永續理念在日常生活中扎根。</p>
-                <p>針對「生態」層面，我們致力於將農業與環境教育緊密結合，積極推動友善棲地的農田管理模式與綠色消費實踐。此外，我們也積極與企業展開合作，導入<strong>ESG（環境、社會、治理）與CSR（企業社會責任）</strong>理念，透過共學、共感、共行動的方式，共同參與守護水里土地與生態的永續發展。</p>
-                <p>展望2025年，在學術單位、在地組織與政府資源的長期支持與輔導下，我們將共同成立「水里永續共好聯盟」。此聯盟將整合包含臺大實驗林水里營林區、水里鄉商圈創生共好協會、南投縣青年農民永續發展協會、水里鄉農會等關鍵夥伴的資源，共同推動城鄉交流、碳互補行動與永續教育，旨在擴大永續影響力，為水里的未來描繪更美好的藍圖。</p>
+            <div class="max-h-[80vh] overflow-y-auto pr-4">
+                <h1 class="text-3xl font-bold text-green-800 border-b-2 border-green-200 pb-3 mb-6">「里山餐桌」：從水里出發的永續農業實踐</h1>
+                <div class="text-gray-700 leading-relaxed space-y-4 mb-10">
+                    <p>「里山餐桌」是由南投水里鄉六位青年農民與在地夥伴共同發起的計畫。它以土地為核心，旨在搭建一個連結人與自然、生產與消費的永續對話平台。</p>
+                    <p>初始階段 (2020-2021)，我們以「青農X社區X農業」模式共同舉辦大地餐桌活動，從「生產」端引導參與者親身體驗食物從泥土到餐桌的奇妙旅程。這不僅是深度的文化與農業體驗，更是我們與消費者之間一場「源（頭）到原（味）」的美味對話。</p>
+                    <p>2022年起，我們透過多元的食農教育課程、農場導覽與沉浸式產地體驗，深入在地農業。我們將SDGs及永續理念融入日常，從「生活」面向開發手作DIY與教育推廣活動。這些有溫度的交流，讓產品被深度理解與珍惜，促使永續理念在日常生活中扎根，將消費轉化為價值的體現。</p>
+                    <p>2023年是重要的一年。在臺大實驗林水里營林區的媒合下，我們為台聚集團舉辦了一場以ESG/CSR為核心的企業永續旅遊，活動指標更被列入次年度的企業永續報告書。同年，我們也執行農業部食農教育推廣計畫，開發出以農村樣貌與生態為主題的「酪酪找生態」活動及與農民面對面的大地遊戲闖關活動，該計畫隔年更獲評選為亮點案例。</p>
+                    <p>2024年，我們精進食農教育與永續生活相關的教具及教案開發與實作，並積極進行教育推廣。在台中區農業改良場輔導下，我們參加農業部第七屆百大青農徵選，榮獲團體組標竿肯定。</p>
+                    <p>2025年，「里山精神」的拼圖邁入「生態」層面。我們更致力於將農業與環境教育緊密結合，積極推動符合GBF（全球生物多樣性框架）與CBD（生物多樣性公約）三大核心目標指引的友善棲地農田管理模式與綠色消費實踐。此外，我們持續與企業合作，導入ESG與CSR理念，透過共學、共感、共行動，共同守護水里土地與生態的永續發展。</p>
+                    <p>展望未來，在學術單位、在地組織與政府資源的長期支持與輔導下，我們共同成立了「水里永續共好聯盟」。此聯盟將整合包含臺大實驗林水里營林區、水里鄉商圈創生共好協會、南投縣青年農民永續發展協會、水里鄉農會等關鍵夥伴資源，共同推動城鄉交流、碳互補行動與永續教育。我們的目標是擴大永續影響力，從水里出發，為台灣農業的未來描繪更美好的藍圖。</p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-green-800 border-b-2 border-green-200 pb-3 mb-8">「里山餐桌」永續實踐歷程與核心影響</h2>
+                
+                <!-- 時序圖 -->
+                <div class="relative border-l-4 border-green-200 pl-8 space-y-12">
+                    <!-- 2020-2021 -->
+                    <div class="relative">
+                        <div class="absolute w-5 h-5 bg-red-500 rounded-full -left-10 mt-1 border-4 border-white"></div>
+                        <div class="p-4 bg-red-50 rounded-lg shadow-md">
+                            <span class="font-bold text-lg text-red-800">初期 (2020-2021)</span>
+                            <span class="inline-block bg-red-200 text-red-800 text-sm font-semibold px-2 py-1 rounded-full ml-2">生產</span>
+                            <p class="mt-2"><strong>主要里程碑/行動：</strong>青農X社區X農業共同辦理大地餐桌。</p>
+                            <p class="mt-1 text-gray-600"><strong>影響與成果：</strong>建立與消費者「源到原」的美味對話，開啟深度文化與農業體驗。</p>
+                        </div>
+                    </div>
+                    <!-- 2022 -->
+                    <div class="relative">
+                        <div class="absolute w-5 h-5 bg-yellow-500 rounded-full -left-10 mt-1 border-4 border-white"></div>
+                        <div class="p-4 bg-yellow-50 rounded-lg shadow-md">
+                            <span class="font-bold text-lg text-yellow-800">2022年</span>
+                            <span class="inline-block bg-yellow-200 text-yellow-800 text-sm font-semibold px-2 py-1 rounded-full ml-2">生活</span>
+                            <p class="mt-2"><strong>主要里程碑/行動：</strong>開發多元食農教育課程、農場導覽、DIY活動；將SDGs與永續理念融入日常。</p>
+                            <p class="mt-1 text-gray-600"><strong>影響與成果：</strong>促進永續理念扎根日常，將消費轉化為價值。</p>
+                        </div>
+                    </div>
+                    <!-- 2023 -->
+                    <div class="relative">
+                        <div class="absolute w-5 h-5 bg-green-500 rounded-full -left-10 mt-1 border-4 border-white"></div>
+                        <div class="p-4 bg-green-50 rounded-lg shadow-md">
+                            <span class="font-bold text-lg text-green-800">2023年</span>
+                            <span class="inline-block bg-green-200 text-green-800 text-sm font-semibold px-2 py-1 rounded-full ml-2">生態/企業</span>
+                            <p class="mt-2"><strong>主要里程碑/行動：</strong>媒合台聚集團舉辦ESG/CSR企業永續旅遊；執行農業部食農教育推廣計畫（獲評亮點）。</p>
+                            <p class="mt-1 text-gray-600"><strong>影響與成果：</strong>企業永續報告書列入指標，成功推廣農村生態與食農教育。</p>
+                        </div>
+                    </div>
+                    <!-- 2024 -->
+                    <div class="relative">
+                        <div class="absolute w-5 h-5 bg-blue-500 rounded-full -left-10 mt-1 border-4 border-white"></div>
+                        <div class="p-4 bg-blue-50 rounded-lg shadow-md">
+                            <span class="font-bold text-lg text-blue-800">2024年</span>
+                            <span class="inline-block bg-blue-200 text-blue-800 text-sm font-semibold px-2 py-1 rounded-full ml-2">教育/精進</span>
+                            <p class="mt-2"><strong>主要里程碑/行動：</strong>精進食農教育教具教案，進行教育推廣；獲選第七屆百大青農團體組標竿。</p>
+                            <p class="mt-1 text-gray-600"><strong>影響與成果：</strong>提升教育品質與推廣效益，獲得國家級肯定。</p>
+                        </div>
+                    </div>
+                    <!-- 2025 -->
+                    <div class="relative">
+                        <div class="absolute w-5 h-5 bg-green-500 rounded-full -left-10 mt-1 border-4 border-white"></div>
+                        <div class="p-4 bg-green-50 rounded-lg shadow-md">
+                            <span class="font-bold text-lg text-green-800">2025年</span>
+                            <span class="inline-block bg-green-200 text-green-800 text-sm font-semibold px-2 py-1 rounded-full ml-2">生態</span>
+                            <p class="mt-2"><strong>主要里程碑/行動：</strong>推動符合GBF/CBD的友善棲地管理與綠色消費；深化企業ESG/CSR合作。</p>
+                            <p class="mt-1 text-gray-600"><strong>影響與成果：</strong>實踐生物多樣性保育，擴大企業參與守護土地。</p>
+                        </div>
+                    </div>
+                     <!-- 展望未來 -->
+                    <div class="relative">
+                        <div class="absolute w-5 h-5 bg-purple-500 rounded-full -left-10 mt-1 border-4 border-white"></div>
+                        <div class="p-4 bg-purple-50 rounded-lg shadow-md">
+                            <span class="font-bold text-lg text-purple-800">展望未來</span>
+                            <span class="inline-block bg-purple-200 text-purple-800 text-sm font-semibold px-2 py-1 rounded-full ml-2">聯盟</span>
+                            <p class="mt-2"><strong>主要里程碑/行動：</strong>整合成立「水里永續共好聯盟」，整合多方資源，推動城鄉交流、碳互補與永續教育。</p>
+                            <p class="mt-1 text-gray-600"><strong>影響與成果：</strong>擴大永續影響力，為台灣農業描繪美好藍圖，從水里走向全台。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 可複製表格 -->
+                <div class="mt-12">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">歷程總覽</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th scope="col" class="py-3 px-6">時間軸</th>
+                                    <th scope="col" class="py-3 px-6">核心面向</th>
+                                    <th scope="col" class="py-3 px-6">主要里程碑/行動</th>
+                                    <th scope="col" class="py-3 px-6">影響與成果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-6">初期</td>
+                                    <td class="py-4 px-6">生產</td>
+                                    <td class="py-4 px-6">青農X社區X農業共同辦理大地餐桌</td>
+                                    <td class="py-4 px-6">建立與消費者「源到原」的美味對話，開啟深度文化與農業體驗</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <td class="py-4 px-6">2022年</td>
+                                    <td class="py-4 px-6">生活</td>
+                                    <td class="py-4 px-6">開發多元食農教育課程、農場導覽、DIY活動；將SDGs與永續理念融入日常</td>
+                                    <td class="py-4 px-6">促進永續理念扎根日常，將消費轉化為價值</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-6">2023年</td>
+                                    <td class="py-4 px-6">生態/企業</td>
+                                    <td class="py-4 px-6">媒合台聚集團舉辦ESG/CSR企業永續旅遊；執行農業部食農教育推廣計畫（獲評亮點）</td>
+                                    <td class="py-4 px-6">企業永續報告書列入指標，成功推廣農村生態與食農教育</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <td class="py-4 px-6">2024年</td>
+                                    <td class="py-4 px-6">教育/精進</td>
+                                    <td class="py-4 px-6">精進食農教育教具教案，進行教育推廣；獲選第七屆百大青農團體組標竿</td>
+                                    <td class="py-4 px-6">提升教育品質與推廣效益，獲得國家級肯定</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-6">2025年</td>
+                                    <td class="py-4 px-6">生態</td>
+                                    <td class="py-4 px-6">推動符合GBF/CBD的友善棲地管理與綠色消費；深化企業ESG/CSR合作</td>
+                                    <td class="py-4 px-6">實踐生物多樣性保育，擴大企業參與守護土地</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-4 px-6">展望未來</td>
+                                    <td class="py-4 px-6">聯盟</td>
+                                    <td class="py-4 px-6">整合成立「水里永續共好聯盟」，整合多方資源，推動城鄉交流、碳互補與永續教育</td>
+                                    <td class="py-4 px-6">擴大永續影響力，為台灣農業描繪美好藍圖，從水里走向全台</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
